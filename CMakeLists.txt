@@ -83,7 +83,8 @@ target_link_libraries(libocca PRIVATE ${CMAKE_THREAD_LIBS_INIT} ${CMAKE_DL_LIBS}
 
 target_include_directories(libocca PUBLIC
                           $<BUILD_INTERFACE:${OCCA_SOURCE_DIR}/include>
-                          $<BUILD_INTERFACE:${OCCA_BUILD_DIR}/include>)
+                          $<BUILD_INTERFACE:${OCCA_BUILD_DIR}/include>
+                          $<INSTALL_INTERFACE:include>)
 
 target_compile_definitions(libocca PRIVATE -DUSE_CMAKE)
 
